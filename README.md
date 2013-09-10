@@ -16,55 +16,64 @@ This package can be found on [Packagist](http://packagist.org) and installed wit
 
 Require the package for _i386_ with:
 
-  php composer.phar require h4cc/wkhtmltopdf-i386
+    php composer.phar require h4cc/wkhtmltopdf-i386
 
 And for _amd64_ with:
 
-  php composer.phar require h4cc/wkhtmltopdf-amd64
+    php composer.phar require h4cc/wkhtmltopdf-amd64
 
+The binary will then be located at:
+
+    vendor/h4cc/wkhtmltopdf-i386/bin/wkhtmltopdf-i386
+
+Also a symlink will be created in your configured bin/ folder, for example:
+
+    vendor/bin/wkhtmltopdf-i386
+
+------------------------------------
 
 An alternative way to install this package is using the direct download from google code.
-You have to add _own package sources_ to provide a new installable package.
+You have to add _own package sources_ to the composer.json to provide a new installable package.
 
-  {
-      "repositories": [
-          {
-              "type": "package",
-              "package": {
-                  "name": "google/wkhtmltopdf-amd64",
-                  "version": "0.11.0-RC1",
-                  "dist": {
-                      "url": "http://wkhtmltopdf.googlecode.com/files/wkhtmltopdf-0.11.0_rc1-static-amd64.tar.bz2",
-                      "type": "tar"
-                  }
-              }
-          },
-          {
-              "type": "package",
-              "package": {
-                  "name": "google/wkhtmltopdf-i386",
-                  "version": "0.11.0-RC1",
-                  "dist": {
-                      "url": "http://wkhtmltopdf.googlecode.com/files/wkhtmltopdf-0.11.0_rc1-static-i386.tar.bz2",
-                      "type": "tar"
-                  }
-              }
-          }
-      ]
-  }
+    {
+        "repositories": [
+            {
+                "type": "package",
+                "package": {
+                    "name": "google/wkhtmltopdf-amd64",
+                    "version": "0.11.0-RC1",
+                    "dist": {
+                        "url": "http://wkhtmltopdf.googlecode.com/files/wkhtmltopdf-0.11.0_rc1-static-amd64.tar.bz2",
+                        "type": "tar"
+                    }
+                }
+            },
+            {
+                "type": "package",
+                "package": {
+                    "name": "google/wkhtmltopdf-i386",
+                    "version": "0.11.0-RC1",
+                    "dist": {
+                        "url": "http://wkhtmltopdf.googlecode.com/files/wkhtmltopdf-0.11.0_rc1-static-i386.tar.bz2",
+                        "type": "tar"
+                    }
+                }
+            }
+        ]
+    }
 
-After that, you can require the defined packages like this for _i386_:
+After that, you can require the defined packages like this in your composer.json for _i386_:
 
-  {
-      "require": {
-          "google/wkhtmltopdf-i386": "0.11.0-RC1"
-      }
-  }
+    {
+        "require": {
+            "google/wkhtmltopdf-i386": "0.11.0-RC1"
+        }
+    }
 
 and for _amd64_:
 
-  {
-      "require": {
-          "google/wkhtmltopdf-amd64": "0.11.0-RC1"
-      }
-  }
+    {
+        "require": {
+            "google/wkhtmltopdf-amd64": "0.11.0-RC1"
+        }
+    }
