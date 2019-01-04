@@ -10,7 +10,7 @@ Binaries for __Microsoft Windows__, also installable with composer, can be found
 
 _Hint_:
 The version of the binary is equal to the git tag.
-To install the latest version, use '0.12.4'.
+To install the latest version, use '0.12.5'.
 
 ### Packagist
 
@@ -18,11 +18,11 @@ This package can be found on [Packagist](http://packagist.org) and installed wit
 
 Require the package for _i386_ with:
 
-    php composer.phar require h4cc/wkhtmltopdf-i386 "0.12.4"
+    php composer.phar require h4cc/wkhtmltopdf-i386 "0.12.5"
 
 And for _amd64_ with:
 
-    php composer.phar require h4cc/wkhtmltopdf-amd64 "0.12.4"
+    php composer.phar require h4cc/wkhtmltopdf-amd64 "0.12.5"
 
 The binary will then be located at:
 
